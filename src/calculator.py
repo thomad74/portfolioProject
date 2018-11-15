@@ -14,7 +14,7 @@ def askForNumInput(textPrompt):
 # Define local variable
     convertedNum = math.nan
 
-# Wait for valid numerical input
+# enter a valid numerical input
 while True:
     num = input("Enter a number: ")
     try:
