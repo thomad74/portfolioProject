@@ -7,6 +7,8 @@ __date__        = "15 November 2018"
 # TODO: make code more robust by not causing it to crash whenever wrong input is detected.
 
 # advanced calculator
+import math
+import random
 
 def askForNumInput(textPrompt):
 # Define local variable
@@ -55,9 +57,6 @@ def abilitiesList():
     print("rand...Returns A Random Number Between 0 and 1")
     print("randint...Returns A Random Number Between The Two Inputs")
     print("//////////////////////////////////////////////////////////////////////////")
-
-import math
-import random
 
 while True:
     operator = input("What operation do you want to perform? ")
