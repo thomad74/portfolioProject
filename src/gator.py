@@ -20,3 +20,21 @@ segment_margin = 4
 # Set initial speed that the gator swims.
 x_change = segment_width + segment_margin
 y_change = 0
+
+class Segment(pygame.sprite.Sprite):
+    # Constructor
+    def __init__(self, x, y):
+        # Call the parent's constructor
+        super().__init__()
+
+        # Set height & width of the gator segments, and choose the color as GREEN.
+        self.image = pygame.Surface([segment_width, segment_height])
+        self.image.fill(GREEN)
+
+        # Creates the gator's starting point as the top left corner of the screen.
+        self.rect = self.image.get_rect()
+        self.rect.x = x
+        self.rect.y = y
+
+# Function to initialize the pygame library.
+pygame.init()
