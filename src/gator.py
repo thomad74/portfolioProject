@@ -79,3 +79,16 @@ while not done:
             if event.key == pygame.K_DOWN:
                 x_change = 0
                 y_change = (segment_height + segment_margin)
+
+    # Deletes the last segment of the gator.
+    old_segment = gator_segments.pop()
+    allspriteslist.remove(old_segment)
+
+    # Determining the location of the new segment.
+    x = gator_segments[0].rect.x + x_change
+    y = gator_segments[0].rect.y + y_change
+    segment = Segment(x, y)
+
+    # Inserting the new segment into the list.
+    gator_segments.insert(0, segment)
+    allspriteslist.add(segment)
