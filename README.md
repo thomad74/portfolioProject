@@ -14,8 +14,5 @@ Testing the application can be done using the `.travis.yml` file that checks the
 
 ##Software Tools Used
 
-...
 
 ##Tangible Results
-
-...
