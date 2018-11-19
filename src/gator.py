@@ -38,3 +38,23 @@ class Segment(pygame.sprite.Sprite):
 
 # Function to initialize the pygame library.
 pygame.init()
+
+# Creates a screen that is 1000x900 in size.
+screen = pygame.display.set_mode([1000, 800])
+
+# Title of pop-up window that game is played in.
+pygame.display.set_caption('Go Gators!')
+
+allspriteslist = pygame.sprite.Group()
+
+# Create an initial gator.
+gator_segments = []
+for i in range(15):
+    x = 250 - (segment_width + segment_margin) * i
+    y = 30
+    segment = Segment(x, y)
+    gator_segments.append(segment)
+    allspriteslist.add(segment)
+
+clock = pygame.time.Clock()
+done = False
