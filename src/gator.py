@@ -64,3 +64,18 @@ while not done:
     for event in pygame.event.get():
         if event.type == pygame.QUIT:
             done = True
+
+        # Speed of the gator, depending on which key you press.
+        if event.type == pygame.KEYDOWN:
+            if event.key == pygame.K_LEFT:
+                x_change = (segment_width + segment_margin) * -1
+                y_change = 0
+            if event.key == pygame.K_RIGHT:
+                x_change = (segment_width + segment_margin)
+                y_change = 0
+            if event.key == pygame.K_UP:
+                x_change = 0
+                y_change = (segment_height + segment_margin) * -1
+            if event.key == pygame.K_DOWN:
+                x_change = 0
+                y_change = (segment_height + segment_margin)
