@@ -92,3 +92,13 @@ while not done:
     # Inserting the new segment into the list.
     gator_segments.insert(0, segment)
     allspriteslist.add(segment)
+
+    screen.fill(BLUE) #Uses the variable created at the beginning to create the screen color.
+
+    allspriteslist.draw(screen) #Creates the screen with the gator on it.
+
+    pygame.display.flip() #Flips the screen.
+
+    clock.tick(5) #How fast the gator is.
+
+pygame.quit() #End of program gator.py.
