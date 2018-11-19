@@ -58,3 +58,9 @@ for i in range(15):
 
 clock = pygame.time.Clock()
 done = False
+
+while not done:
+
+    for event in pygame.event.get():
+        if event.type == pygame.QUIT:
+            done = True
