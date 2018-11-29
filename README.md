@@ -17,3 +17,7 @@ Testing the application can be done using the `.travis.yml` file that checks the
 The first and main software tool I used to create this project was Atom. I used Atom as my text editor to put my code into, and have a fully functioning program as a result. Additionally, I used GitHub to commit and push my work to a repository that stores all of my code, writing, and changes to the program. I also used a software tool known as Travis CI that checks the correctness of my program base on a given style guide. The style guide I used was implemented via Travis, and was the default one when creating a .travis.yml file for my code.
 
 ## Tangible Results
+
+So far, my program allows the user to play a basic game that uses the arrow keys to control the movement of a virtual gator around a virtual body of water. Hopefully I will be able to add some more features that might do things like allow the gator to grow in size or kill the program if it crashes into itself or the border.
+
+![Logo](src/images/gator.png)
