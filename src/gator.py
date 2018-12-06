@@ -3,9 +3,12 @@
 a gator swimming through a body of water. """
 
 __author__ = "Dillon Thoma"
-__date__ = "15 November 2018"
+__date__ = "18 December 2018"
 
-# MUST import the pygame package to run this program.
+# MUST import these packages to run this program.
+import curses
+from curses import KEY_RIGHT, KEY_LEFT, KEY_UP, KEY_DOWN
+from random import randint
 import pygame
 
 # Colors of background and gator, respectively.
@@ -21,6 +24,10 @@ segment_margin = 4
 # Set initial speed that the gator swims.
 x_change = segment_width + segment_margin
 y_change = 0
+
+# Creates and prints the first piece of food.
+food = [10,20]
+win.addch(food[0], food[1], '*')
 
 class Segment(pygame.sprite.Sprite):
     # Constructor
@@ -56,7 +63,6 @@ for i in range(15):
     segment = Segment(x, y)
     gator_segments.append(segment)
     allspriteslist.add(segment)
-    if gator_segments[0] in gator_segments[1:]: break
 
 clock = pygame.time.Clock()
 done = False
@@ -103,5 +109,19 @@ while not done:
     pygame.display.flip()  # Flips the screen.
 
     clock.tick(5)  # How fast the gator is.
+
+if gator_segments[0] in gator_segments[1:]:
+    break # If gator runs into itself, you lose.
+if snake[0] == food: # If the gator eats the food on screen, it will grow.
+    food = []
+    score += 1
+    while food == []:
+        food = [randint(1, 18), randint(1, 58)]
+        if food in snake: food = []
+    win.addch(food[0], food[1], '*')
+else: # If it does not eat, it will shrink and you will eventually lose.
+    last = snake.pop()
+    win.addch(last[0], last[1], ' ')
+win.addch(snake[0][0], snake[0][1], '#')
 
 pygame.quit()  # End of program gator.py.
