@@ -18,6 +18,6 @@ The first and main software tool I used to create this project was Atom. I used 
 
 ## Tangible Results
 
-So far, my program allows the user to play a basic game that uses the arrow keys to control the movement of a virtual gator around a virtual body of water. Hopefully I will be able to add some more features that might do things like allow the gator to grow in size or kill the program if it crashes into itself or the border.
+So far, my program allows the user to play a basic game that uses the arrow keys to control the movement of a virtual gator around a virtual body of water. In the future, I will be able to add some more features that might do things like allow the gator to grow or kill the program if it crashes into itself or the border.
 
 ![Logo](src/images/gator.png)
