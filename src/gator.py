@@ -22,7 +22,6 @@ segment_margin = 4
 x_change = segment_width + segment_margin
 y_change = 0
 
-
 class Segment(pygame.sprite.Sprite):
     # Constructor
     def __init__(self, x, y):
@@ -57,6 +56,7 @@ for i in range(15):
     segment = Segment(x, y)
     gator_segments.append(segment)
     allspriteslist.add(segment)
+    if gator_segments[0] in gator_segments[1:]: break
 
 clock = pygame.time.Clock()
 done = False
