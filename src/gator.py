@@ -118,7 +118,8 @@ if snake[0] == food:  # If the gator eats the food on screen, it will grow.
     score += 1
     while food == []:
         food = [randint(1, 18), randint(1, 58)]
-        if food in snake: food = []
+        if food in snake:
+            food = []
     win.addch(food[0], food[1], '*')
 else:  # If it does not eat, it will shrink and you will eventually lose.
     last = snake.pop()
