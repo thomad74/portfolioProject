@@ -35,7 +35,7 @@ x_change = segment_width + segment_margin
 y_change = 0
 
 # Creates and prints initial gator and piece of food.
-gator = [[4,10], [4,9], [4,8]]
+gator = [[4, 10], [4, 9], [4, 8]]
 food = [10, 20]
 
 win.addch(food[0], food[1], '*')
