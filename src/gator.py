@@ -11,9 +11,18 @@ from curses import KEY_RIGHT, KEY_LEFT, KEY_UP, KEY_DOWN
 from random import randint
 import pygame
 
+curses.initscr()
+win = curses.newwin(20, 60, 0, 0)
+win.keypad(1)
+curses.noecho()
+curses.curs_set(0)
+win.border(0)
+win.nodelay(1)
+
 # Colors of background and gator, respectively.
 BLUE = (0, 0, 255)
 GREEN = (124, 252, 0)
+RED = (255, 0, 0)
 
 # Set the width and height of each segement of the gator.
 segment_width = 21
@@ -25,8 +34,10 @@ segment_margin = 4
 x_change = segment_width + segment_margin
 y_change = 0
 
-# Creates and prints the first piece of food.
+# Creates and prints initial gator and piece of food.
+gator = [[4,10], [4,9], [4,8]]
 food = [10, 20]
+
 win.addch(food[0], food[1], '*')
 
 
@@ -111,19 +122,19 @@ while not done:
 
     clock.tick(5)  # How fast the gator is.
 
-if gator_segments[0] in gator_segments[1:]:
-    break  # If gator runs into itself, you lose.
-if snake[0] == food:  # If the gator eats the food on screen, it will grow.
+if gator[0] in gator[1:]:
+    screen.fill(RED)  # If gator runs into itself, screen turns red.
+if gator[0] == food:  # If the gator eats the food on screen, it will grow.
     food = []
     score += 1
     while food == []:
         food = [randint(1, 18), randint(1, 58)]
-        if food in snake:
+        if food in gator:
             food = []
     win.addch(food[0], food[1], '*')
 else:  # If it does not eat, it will shrink and you will eventually lose.
-    last = snake.pop()
+    last = gator.pop()
     win.addch(last[0], last[1], ' ')
-win.addch(snake[0][0], snake[0][1], '#')
+win.addch(gator[0][0], gator[0][1], '#')
 
 pygame.quit()  # End of program gator.py.
