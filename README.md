@@ -2,7 +2,7 @@
 
 ## Project Name and Description
 
-This project, `gator.py` creates a pop-up window on the screen of a set size and enters a green gator swimming through a blue body of water. The game simply allows the user to control the movements of the gator around the screen, imitating a gator swimming through a swamp. Additionally, I may try to add some functions that allow the gator to grow if it eats little fish, or die if it crashes into rocks or itself.
+This project, `gator.py` creates a pop-up window on the screen of a set size and enters a green gator swimming through a blue body of water. The game simply allows the user to control the movements of the gator around the screen, imitating a gator swimming through a swamp. Additionally, I may try to add some functions that allow the gator to grow if it eats little fish, or die if it crashes into rocks or itself. This was my first time using Pygame, and although the program is somewhat simple, I enjoyed creating it and hope to learn more about the package in the future to create more in-depth Pygame programs.
 
 ## How to Build and Run the Project
 
@@ -18,6 +18,6 @@ The first and main software tool I used to create this project was Atom. I used 
 
 ## Tangible Results
 
-So far, my program allows the user to play a basic game that uses the arrow keys to control the movement of a virtual gator around a virtual body of water. In the future, I will be able to add some more features that might do things like allow the gator to grow or kill the program if it crashes into itself or the border.
+So far, my program allows the user to play a basic game that uses the arrow keys to control the movement of a virtual gator around a virtual body of water. In the future, I will be able to add some more features that might do things like allow the gator to grow or kill the program if it crashes into itself or the border. I had attempted to implement some of these things, but my knowledge in Pygame is not advanced enough for some of these. I will continue to learn and implement new features to this program as time goes on.
 
 ![Logo](src/images/gator.png)
